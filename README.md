@@ -1,2 +1,2 @@
 # iid
-Study off iid selected iid structures by concentration.
+Study of iid selected structures by concentration.

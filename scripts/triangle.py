@@ -122,7 +122,7 @@ def _read_concs(fname):
     out = []
     with open(fname,"r") as f:
         for line in f:
-            conc = [i for i in line.strip().split()[2:]]
+            conc = [i for i in line.strip().split()[1:]]
 
             conc_f = []
             for c in conc:
@@ -389,9 +389,9 @@ def conc_err_plot(fname, elements=None, title=None, colormap=None, reduce=True, 
     plt.show()
 
 # make_ternary_legend(["Al","Cu","Ni"])
-conc_err_plot('energies_orig',elements=["Al","Cu","Ni"],
-              title="AlCuNi Lowest Energy Errors",colormap="Greys",
-              cbarlabel="Error in Formation Enthalpy (eV/atom)", plot_type="cont",dist=5)#, s=60)
+conc_err_plot('data/AlCuNi_500_IID_2.txt',elements=["Al","Cu","Ni"], concs=True,
+              title="AlCuNi 500 I.I.D. Structures 2",colormap="Greys",
+              cbarlabel="Number of Structures at Concentration", plot_type="scat", s=60)
 
 # enthalpy_plot('energies_Al30')
 
